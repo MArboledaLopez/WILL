@@ -12,6 +12,10 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+  var longestString = strings.reduce(function(longest, current) {
+    return current.length > longest.length ? current : longest;
+  }, '');
+  return longestString;
 }
 
 // No modifiques nada debajo de esta linea //
